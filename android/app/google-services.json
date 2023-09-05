@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "431881222390",
+    "project_id": "care-for-hemophilia",
+    "storage_bucket": "care-for-hemophilia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431881222390:android:c5edab731e0e29f36094d7",
+        "android_client_info": {
+          "package_name": "com.hemofiliamobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431881222390-fgpsbuscio04rtjn5vo5v7alhfle4uas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUDuSntoMp7_1RIwaVZWqSizvMsMZTjeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431881222390-fgpsbuscio04rtjn5vo5v7alhfle4uas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

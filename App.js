@@ -54,9 +54,9 @@ async function requestUserPermission() {
     if (enabled) {
       console.log('Authorization status:', authStatus);
     }
+  } else {
+    await messaging().registerDeviceForRemoteMessages();
   }
-
-  await messaging().registerDeviceForRemoteMessages();
   const token = await messaging().getToken();
   console.log('Token FCM :', token);
 }

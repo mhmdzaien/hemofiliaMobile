@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Linking} from 'react-native';
 import {
   Text,
   View,
@@ -134,7 +135,7 @@ class Explanation extends Component {
               style={{
                 flex: 1,
                 backgroundColor: '#ffffff',
-                marginHorizontal: 10,
+                marginHorizontal: 8,
                 marginVertical: 10,
                 padding: 20,
                 borderRadius: 8,
@@ -170,6 +171,21 @@ class Explanation extends Component {
                   )}
                   keyExtractor={({item, index}) => index}
                 />
+                <Text
+                  onPress={() =>
+                    Linking.openURL(
+                      'https://www.cdc.gov/ncbddd/hemophilia/facts.html',
+                    )
+                  }
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 'bold',
+                    color: 'black',
+                    marginBottom: 3,
+                  }}>
+                  Sumber:{'\n'}
+                  https://www.cdc.gov/ncbddd/hemophilia/facts.html
+                </Text>
               </View>
             </View>
           </View>

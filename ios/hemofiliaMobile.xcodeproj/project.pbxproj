@@ -14,7 +14,7 @@
 		3260460236202E4F014888DE /* Pods_hemofiliaMobile_hemofiliaMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4466B6FC94B8185DD32793 /* Pods_hemofiliaMobile_hemofiliaMobileTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		92EE0CF01E506D435F1B134A /* Pods_hemofiliaMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC41AEC4CF678D0F1D4516A4 /* Pods_hemofiliaMobile.framework */; };
-		E3F4DDA52AAF33B100550146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DDA42AAF33B100550146 /* GoogleService-Info.plist */; };
+		A0F72C892AB7DC3B00376834 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0F72C882AB7DC3B00376834 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,7 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = hemofiliaMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-hemofiliaMobile-hemofiliaMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hemofiliaMobile-hemofiliaMobileTests.release.xcconfig"; path = "Target Support Files/Pods-hemofiliaMobile-hemofiliaMobileTests/Pods-hemofiliaMobile-hemofiliaMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		947F91BC959FAF66A07B1558 /* Pods-hemofiliaMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hemofiliaMobileTests.release.xcconfig"; path = "Target Support Files/Pods-hemofiliaMobileTests/Pods-hemofiliaMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		A0F72C882AB7DC3B00376834 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC41AEC4CF678D0F1D4516A4 /* Pods_hemofiliaMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hemofiliaMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E310A33D29815661002F9C34 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		E310A33E29815661002F9C34 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		E310A34A29815662002F9C34 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		E310A34B29815662002F9C34 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		E310A37629816826002F9C34 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
-		E3F4DDA42AAF33B100550146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E3F4DDA62AAF3D3E00550146 /* hemofiliaMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = hemofiliaMobile.entitlements; path = hemofiliaMobile/hemofiliaMobile.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FBB2BA1C8C703CA3235CBCBD /* Pods-hemofiliaMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hemofiliaMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-hemofiliaMobileTests/Pods-hemofiliaMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +107,7 @@
 		13B07FAE1A68108700A75B9A /* hemofiliaMobile */ = {
 			isa = PBXGroup;
 			children = (
+				A0F72C882AB7DC3B00376834 /* GoogleService-Info.plist */,
 				E3F4DDA62AAF3D3E00550146 /* hemofiliaMobile.entitlements */,
 				E310A33A29815574002F9C34 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -139,7 +140,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				E3F4DDA42AAF33B100550146 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* hemofiliaMobile */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* hemofiliaMobileTests */,
@@ -292,7 +292,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				E3F4DDA52AAF33B100550146 /* GoogleService-Info.plist in Resources */,
+				A0F72C892AB7DC3B00376834 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,9 +460,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = VP57Q35KKB;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DR8MM6AB3U;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -482,7 +482,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hemofiliaMobile.app/hemofiliaMobile";
 			};
 			name = Debug;
@@ -493,10 +496,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = VP57Q35KKB;
+				DEVELOPMENT_TEAM = DR8MM6AB3U;
 				INFOPLIST_FILE = hemofiliaMobileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -512,7 +515,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hemofiliaMobile.app/hemofiliaMobile";
 			};
 			name = Release;
@@ -525,17 +531,19 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = hemofiliaMobile/hemofiliaMobile.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Pandji Winata Nurikhwan (VP57Q35KKB)";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = VP57Q35KKB;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = DR8MM6AB3U;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = hemofiliaMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Care for Hemophilia";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -543,9 +551,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hemofiliamobile.fk;
 				PRODUCT_NAME = hemofiliaMobile;
-				PROVISIONING_PROFILE_SPECIFIER = "Distribution Hemophilia Mobile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -558,16 +570,18 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = hemofiliaMobile/hemofiliaMobile.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Pandji Winata Nurikhwan (VP57Q35KKB)";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = VP57Q35KKB;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = DR8MM6AB3U;
 				INFOPLIST_FILE = hemofiliaMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Care for Hemophilia";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -575,8 +589,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hemofiliamobile.fk;
 				PRODUCT_NAME = hemofiliaMobile;
-				PROVISIONING_PROFILE_SPECIFIER = "Distribution Hemophilia Mobile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

@@ -7,6 +7,7 @@ import {
   FlatList,
   ScrollView,
   SafeAreaView,
+  Linking,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {WebView} from 'react-native-webview';
@@ -102,7 +103,7 @@ class Symptoms extends Component {
               style={{
                 flex: 1,
                 backgroundColor: '#ffffff',
-                marginHorizontal: 10,
+                marginHorizontal: 8,
                 marginVertical: 10,
                 padding: 20,
                 borderRadius: 8,
@@ -162,6 +163,22 @@ class Symptoms extends Component {
                   )}
                   keyExtractor={(item, key) => item.title}
                 />
+                <Text
+                  onPress={() =>
+                    Linking.openURL(
+                      'https://www.cdc.gov/ncbddd/hemophilia/facts.html',
+                    )
+                  }
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 'bold',
+                    color: 'black',
+                    marginBottom: 3,
+                    marginTop: 3,
+                  }}>
+                  Sumber:{'\n'}
+                  https://www.cdc.gov/ncbddd/hemophilia/facts.html
+                </Text>
               </View>
             </View>
           </View>

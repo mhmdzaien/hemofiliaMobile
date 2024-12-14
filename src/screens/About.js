@@ -168,6 +168,25 @@ class About extends Component {
                   {this.state.kontak.no_telpon}
                 </Text>
               </View>
+              <View>
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate('PrivacyPolicy')
+                  }>
+                  <Text
+                    style={{
+                      marginHorizontal: 10,
+                      marginBottom: 3,
+                      marginTop: 5,
+                      color: '#5C5C5C',
+                      fontSize: 14,
+                      fontWeight: 'bold',
+                      textAlign: 'justify',
+                    }}>
+                    Privacy Policy Information
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
             <Text
               style={{

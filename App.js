@@ -22,6 +22,7 @@ import Symptoms from './src/screens/Symptoms';
 import RsNearby from './src/screens/RsNearby';
 import messaging from '@react-native-firebase/messaging';
 import DeviceInfo from 'react-native-device-info';
+import PrivacyPolicy from './src/screens/PrivacyPolicy';
 
 const Stack = createNativeStackNavigator();
 
@@ -77,6 +78,7 @@ function App() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
         <Stack.Screen name="AssessmentIntro" component={AssessmentIntro} />
         <Stack.Screen
           name="AssessmentLanguage"

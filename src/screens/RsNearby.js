@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   Text,
   View,
@@ -14,14 +14,14 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Menu from '../../components/Menu';
 import RumahSakitCard from '../../components/RumahSakitCard';
-import {request, PERMISSIONS} from 'react-native-permissions';
+import { request, PERMISSIONS } from 'react-native-permissions';
 import Geolocation from 'react-native-geolocation-service';
-import { SafeAreaView  } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 class RsNearby extends Component {
   constructor(props) {
     super(props);
-    this.currentPosition = {latitude: null, longitude: null};
+    this.currentPosition = { latitude: null, longitude: null };
     this.state = {
       isLoading: false,
       searchValue: '',
@@ -35,7 +35,7 @@ class RsNearby extends Component {
 
   async requestLocationPermission() {
     try {
-      this.setState({requestingLocation: true, isLoading: true});
+      this.setState({ requestingLocation: true, isLoading: true });
 
       const locationPermissionRequest = await request(
         Platform.OS === 'ios'
@@ -50,18 +50,18 @@ class RsNearby extends Component {
               latitude: pos.coords.latitude,
               longitude: pos.coords.longitude,
             };
-            this.setState({requestingLocation: false, isLoading: false});
+            this.setState({ requestingLocation: false, isLoading: false });
             this.requestData(1);
           },
           error => {
-            this.setState({requestingLocation: false, isLoading: false});
+            this.setState({ requestingLocation: false, isLoading: false });
             console.log(error.code, error.message);
             this.requestData(1);
           },
-          {enableHighAccuracy: true, timeout: 15000, showLocationDialog: true},
+          { enableHighAccuracy: true, timeout: 15000, showLocationDialog: true },
         );
       } else {
-        this.setState({requestingLocation: false, isLoading: true});
+        this.setState({ requestingLocation: false, isLoading: true });
         this.requestData(1);
       }
     } catch (err) {
@@ -76,15 +76,24 @@ class RsNearby extends Component {
       this.state.moreLoading == false
     ) {
       if (page == 1) {
-        this.setState({isLoading: true});
+        this.setState({ isLoading: true });
       } else {
-        this.setState({moreLoading: true});
+        this.setState({ moreLoading: true });
       }
       this.state.currentPage = page;
       await fetch(
         `https://care4blood.ulm.ac.id/api/rumahSakit?page=${page}&search=${this.state.searchValue}&longitude=${this.currentPosition.longitude}&latitude=${this.currentPosition.latitude}`,
+        {
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer care4Blood',
+          }
+        }
       )
-        .then(response => response.json())
+        .then(response => {
+          return response.json()
+        })
         .then(json => {
           if (json.data.length == 0) {
             this.setState({
@@ -143,7 +152,7 @@ class RsNearby extends Component {
 
   render() {
     return (
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={{ flex: 1 }}>
         <View style={style.ScreenBody}>
           <View style={style.NavbarContainer}>
             <View style={style.NavbarIconLeft}>
@@ -168,7 +177,7 @@ class RsNearby extends Component {
                 paddingHorizontal: 10,
               }}>
               <Text
-                style={{fontWeight: 'bold', fontSize: 18, color: '#ffffff'}}>
+                style={{ fontWeight: 'bold', fontSize: 18, color: '#ffffff' }}>
                 Daftar Rumah Sakit
               </Text>
             </View>
@@ -190,10 +199,10 @@ class RsNearby extends Component {
                 onPress={() => this.requestData(1)}
               />
               <TextInput
-                style={{flexGrow: 1, marginLeft: 5}}
+                style={{ flexGrow: 1, marginLeft: 5 }}
                 placeholder="Pencarian"
                 value={this.state.searchValue}
-                onChangeText={text => this.setState({searchValue: text})}
+                onChangeText={text => this.setState({ searchValue: text })}
                 onSubmitEditing={() => this.requestData(1)}
               />
               {this.state.searchValue.length > 0 && (
@@ -202,13 +211,13 @@ class RsNearby extends Component {
                   size={20}
                   color="#000"
                   onPress={() => {
-                    this.setState({searchValue: ''});
+                    this.setState({ searchValue: '' });
                     this.requestData(1);
                   }}
                 />
               )}
             </View>
-            <View style={{flex: 1}}>
+            <View style={{ flex: 1 }}>
               {this.state.isLoading ? (
                 <View style={style.loading}>
                   <ActivityIndicator size="large" />
@@ -218,9 +227,9 @@ class RsNearby extends Component {
                 </View>
               ) : (
                 <FlatList
-                  contentContainerStyle={{flexGrow: 1}}
+                  contentContainerStyle={{ flexGrow: 1 }}
                   data={this.state.rumahSakitData}
-                  renderItem={({item}) => (
+                  renderItem={({ item }) => (
                     <View style={style.cardContainer}>
                       <RumahSakitCard data={item} />
                     </View>

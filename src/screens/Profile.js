@@ -158,6 +158,7 @@ class Profile extends Component {
             
             {/* FlatList dengan ListHeaderComponent untuk mengganti ScrollView */}
             <FlatList
+            
               data={this.state.AssessmentHistory}
               renderItem={this.renderAssessmentItem}
               keyExtractor={item => item.uuid}
@@ -294,8 +295,6 @@ class Profile extends Component {
                     </Text>
                   </TouchableOpacity>
 
-                  {/* Menu Component */}
-                  <Menu screenName="Login" />
                 </>
               )}
               // Tambahan props untuk performa yang lebih baik
@@ -311,6 +310,7 @@ class Profile extends Component {
             />
           </View>
 
+             
           {/* Modal */}
           <Modal
             animationType="slide"
@@ -401,6 +401,8 @@ class Profile extends Component {
             </View>
           </Modal>
         </View>
+        {/* Menu Component */}
+        <Menu screenName="Login" />
       </SafeAreaView>
     );
   }

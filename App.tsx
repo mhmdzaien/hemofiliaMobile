@@ -23,6 +23,7 @@ import RsNearby from './src/screens/RsNearby';
 import messaging from '@react-native-firebase/messaging';
 import DeviceInfo from 'react-native-device-info';
 import PrivacyPolicy from './src/screens/PrivacyPolicy';
+import { SystemBars } from "react-native-edge-to-edge";
 
 const Stack = createNativeStackNavigator();
 
@@ -69,11 +70,7 @@ function App(): React.JSX.Element {
   });
   return (
     <NavigationContainer>
-      <StatusBar
-        backgroundColor="#CE1E20"
-        barStyle="light-content"
-        translucent={false}
-      />
+      <SystemBars style="dark" />
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{ headerShown: false }}>

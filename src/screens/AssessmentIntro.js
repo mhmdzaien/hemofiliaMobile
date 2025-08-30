@@ -8,12 +8,12 @@ import {
   ToastAndroid,
   ScrollView,
   Alert,
-  SafeAreaView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import CheckBox from '@react-native-community/checkbox';
 import Slider from '@react-native-community/slider';
+import { SafeAreaView  } from 'react-native-safe-area-context';
 
 class AssessmentIntro extends Component {
   constructor(props) {

@@ -7,10 +7,10 @@ import {
   FlatList,
   ScrollView,
   StyleSheet,
-  SafeAreaView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Menu from '../../components/Menu';
+import { SafeAreaView } from 'react-native-safe-area-context';
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -59,6 +59,7 @@ class Home extends Component {
   render() {
     return (
       <SafeAreaView style={{flex: 1}}>
+        
         <View style={style.screenBody}>
           <View style={style.navbarContainer}>
             <View style={style.navbarIconLeft}>

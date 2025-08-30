@@ -6,11 +6,11 @@ import {
   Image,
   FlatList,
   StyleSheet,
-  SafeAreaView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import {WebView} from 'react-native-webview';
 import Menu from '../../components/Menu';
+import { SafeAreaView  } from 'react-native-safe-area-context';
+
 class About extends Component {
   constructor(props) {
     super(props);

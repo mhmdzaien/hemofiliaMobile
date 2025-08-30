@@ -7,7 +7,6 @@ import {
   Button,
   ScrollView,
   StyleSheet,
-  SafeAreaView,
 } from 'react-native';
 import DatePicker from 'react-native-date-picker';
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -16,6 +15,7 @@ import {format} from 'date-fns';
 import {useForm, Controller} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
 import CustomTextInput from '../../components/CustomTextInput';
+import { SafeAreaView  } from 'react-native-safe-area-context';
 
 const EditProfile = props => {
   const navigation = useNavigation();

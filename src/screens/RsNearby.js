@@ -6,7 +6,6 @@ import {
   FlatList,
   TextInput,
   StyleSheet,
-  SafeAreaView,
   Button,
   ActivityIndicator,
   Platform,
@@ -17,6 +16,7 @@ import Menu from '../../components/Menu';
 import RumahSakitCard from '../../components/RumahSakitCard';
 import {request, PERMISSIONS} from 'react-native-permissions';
 import Geolocation from 'react-native-geolocation-service';
+import { SafeAreaView  } from 'react-native-safe-area-context';
 
 class RsNearby extends Component {
   constructor(props) {

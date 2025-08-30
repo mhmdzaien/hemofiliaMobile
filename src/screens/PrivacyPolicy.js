@@ -6,10 +6,10 @@ import {
   Image,
   FlatList,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { SafeAreaView  } from 'react-native-safe-area-context';
 
 class PrivacyPolicy extends Component {
   render() {

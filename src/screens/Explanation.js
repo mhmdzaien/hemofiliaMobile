@@ -1,16 +1,14 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 import {Linking} from 'react-native';
 import {
   Text,
   View,
   TouchableOpacity,
-  Image,
   FlatList,
-  ScrollView,
-  SafeAreaView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import {WebView} from 'react-native-webview';
+import { SafeAreaView  } from 'react-native-safe-area-context';
+
 class Explanation extends Component {
   constructor(props) {
     super(props);

@@ -1,16 +1,15 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 import {
   Text,
   View,
   TouchableOpacity,
   Image,
   FlatList,
-  ScrollView,
-  SafeAreaView,
   Linking,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import {WebView} from 'react-native-webview';
+import { SafeAreaView  } from 'react-native-safe-area-context';
+
 class Symptoms extends Component {
   constructor(props) {
     super(props);

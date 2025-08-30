@@ -8,7 +8,6 @@ import {
   ToastAndroid,
   Platform,
   Alert,
-  SafeAreaView,
   ActivityIndicator,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -16,6 +15,7 @@ import Menu from '../../components/Menu';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {request, PERMISSIONS} from 'react-native-permissions';
 import Geolocation from 'react-native-geolocation-service';
+import { SafeAreaView   } from 'react-native-safe-area-context';
 
 class AssessmentLanguage extends Component {
   constructor(props) {

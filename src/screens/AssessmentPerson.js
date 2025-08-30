@@ -6,7 +6,6 @@ import {
   Button,
   ScrollView,
   StyleSheet,
-  SafeAreaView,
 } from 'react-native';
 import DatePicker from 'react-native-date-picker';
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -16,6 +15,7 @@ import {useForm} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
 import CustomTextInput from '../../components/CustomTextInput';
 import DropDownPicker from 'react-native-dropdown-picker';
+import { SafeAreaView  } from 'react-native-safe-area-context';
 
 const AssessmentPerson = props => {
   const navigation = useNavigation();

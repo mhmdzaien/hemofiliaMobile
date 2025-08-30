@@ -6,15 +6,12 @@ import {
   TouchableOpacity,
   StyleSheet,
   Linking,
-  Alert,
-  Touchable,
-  SafeAreaView,
   ScrollView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import Slider from '@react-native-community/slider';
 import RumahSakitCard from '../../components/RumahSakitCard';
+import { SafeAreaView  } from 'react-native-safe-area-context';
 
 class Result extends Component {
   constructor(props) {

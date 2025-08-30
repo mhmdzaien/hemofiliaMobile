@@ -1,9 +1,9 @@
 // In App.js in a new project
 
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Platform, Alert} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Platform, Alert, StatusBar } from 'react-native';
 import Home from './src/screens/Home';
 import Blog from './src/screens/Blogs';
 import BlogShow from './src/screens/BlogShow';
@@ -35,8 +35,8 @@ function initFirebaseNotificationHandler() {
       remoteMessage.data?.version != DeviceInfo.getVersion()
     ) {
       Alert.alert(
-        remoteMessage.notification.title,
-        remoteMessage.notification.body,
+        remoteMessage.notification?.title ?? "No Title",
+        remoteMessage.notification?.body,
       );
     }
   });
@@ -62,16 +62,21 @@ async function requestUserPermission() {
   console.log('Token FCM :', token);
 }
 
-function App() {
+function App(): React.JSX.Element {
   requestUserPermission();
   React.useEffect(() => {
     initFirebaseNotificationHandler();
   });
   return (
     <NavigationContainer>
+      <StatusBar
+        backgroundColor="#CE1E20"
+        barStyle="light-content"
+        translucent={false}
+      />
       <Stack.Navigator
         initialRouteName="Home"
-        screenOptions={{headerShown: false}}>
+        screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Blog" component={Blog} />
         <Stack.Screen name="BlogShow" component={BlogShow} />

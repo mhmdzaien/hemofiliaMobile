@@ -6,11 +6,11 @@ import {
   Image,
   FlatList,
   TextInput,
-  SafeAreaView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Menu from '../../components/Menu';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SafeAreaView  } from 'react-native-safe-area-context';
 
 class AssessmentLanguage extends Component {
   constructor(props) {

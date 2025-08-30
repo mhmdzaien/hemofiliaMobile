@@ -5,13 +5,13 @@ import {
   TouchableOpacity,
   TextInput,
   Image,
-  SafeAreaView,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Button from '../../components/Button';
 import CustomTextInput from '../../components/CustomTextInput';
 import {useForm, Controller} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
+import { SafeAreaView  } from 'react-native-safe-area-context';
 
 const Login = () => {
   const [autentikasi, setAutentikasi] = useState('');

@@ -17,9 +17,6 @@ import RumahSakitCard from '../../components/RumahSakitCard';
 import { request, PERMISSIONS } from 'react-native-permissions';
 import Geolocation from 'react-native-geolocation-service';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import HandleChallenge from './components/HandleChallenge';
-import { useNavigation } from '@react-navigation/native';
-import CookieManager from '@react-native-cookies/cookies';
 import axios from 'axios';
 
 const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
@@ -87,7 +84,6 @@ class RsNearby extends Component {
         this.setState({ moreLoading: true });
       }
       this.state.currentPage = page;
-      const cookie = await CookieManager.get(`https://care4blood.ulm.ac.id/api/rumahSakit?page=${page}&search=${this.state.searchValue}&longitude=${this.currentPosition.longitude}&latitude=${this.currentPosition.latitude}`)
       axios.get(
         `https://care4blood.ulm.ac.id/api/rumahSakit?page=${page}&search=${this.state.searchValue}&longitude=${this.currentPosition.longitude}&latitude=${this.currentPosition.latitude}`,
         {
@@ -96,8 +92,7 @@ class RsNearby extends Component {
             "User-Agent": userAgent,
             Accept: 'application/json',
             'Content-Type': 'application/json',
-            Authorization: 'Bearer care4Blood',
-            'Cookie': { cf_clearance: cookie['cf_clearance'].value }
+            Authorization: 'Bearer care4Blood'
           }
         }
       ).then(response => {

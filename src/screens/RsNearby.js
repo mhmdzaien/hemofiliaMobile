@@ -17,11 +17,18 @@ import RumahSakitCard from '../../components/RumahSakitCard';
 import { request, PERMISSIONS } from 'react-native-permissions';
 import Geolocation from 'react-native-geolocation-service';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import HandleChallenge from './components/HandleChallenge';
+import { useNavigation } from '@react-navigation/native';
+import CookieManager from '@react-native-cookies/cookies';
+import axios from 'axios';
+
+const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
 class RsNearby extends Component {
   constructor(props) {
     super(props);
     this.currentPosition = { latitude: null, longitude: null };
+    this.refCloudflare = React.createRef();
     this.state = {
       isLoading: false,
       searchValue: '',
@@ -70,7 +77,6 @@ class RsNearby extends Component {
   }
 
   async requestData(page = 1) {
-    console.log(this.state.moreLoading == false);
     if (
       (this.state.isListEnd == false || page == 1) &&
       this.state.moreLoading == false
@@ -81,43 +87,52 @@ class RsNearby extends Component {
         this.setState({ moreLoading: true });
       }
       this.state.currentPage = page;
-      await fetch(
+      const cookie = await CookieManager.get(`https://care4blood.ulm.ac.id/api/rumahSakit?page=${page}&search=${this.state.searchValue}&longitude=${this.currentPosition.longitude}&latitude=${this.currentPosition.latitude}`)
+      axios.get(
         `https://care4blood.ulm.ac.id/api/rumahSakit?page=${page}&search=${this.state.searchValue}&longitude=${this.currentPosition.longitude}&latitude=${this.currentPosition.latitude}`,
         {
+          credentials: 'include',
           headers: {
+            "User-Agent": userAgent,
             Accept: 'application/json',
             'Content-Type': 'application/json',
             Authorization: 'Bearer care4Blood',
+            'Cookie': { cf_clearance: cookie['cf_clearance'].value }
           }
         }
-      )
-        .then(response => {
-          return response.json()
-        })
-        .then(json => {
-          if (json.data.length == 0) {
-            this.setState({
-              isListEnd: true,
-              isLoading: false,
-              moreLoading: false,
-            });
-          } else if (page == 1) {
-            this.setState({
-              isListEnd: false,
-              rumahSakitData: json.data,
-              isLoading: false,
-              moreLoading: false,
-            });
-          } else {
-            this.setState({
-              rumahSakitData: this.state.rumahSakitData.concat(json.data),
-              isLoading: false,
-              moreLoading: false,
-            });
-          }
-          console.log('Ukuran Data :', this.state.rumahSakitData.length);
-        })
-        .catch(err => console.log(err));
+      ).then(response => {
+        const json = response.data;
+        if (json.data.length == 0) {
+          this.setState({
+            isListEnd: true,
+            isLoading: false,
+            moreLoading: false,
+          });
+        } else if (page == 1) {
+          this.setState({
+            isListEnd: false,
+            rumahSakitData: json.data,
+            isLoading: false,
+            moreLoading: false,
+          });
+        } else {
+          this.setState({
+            rumahSakitData: this.state.rumahSakitData.concat(json.data),
+            isLoading: false,
+            moreLoading: false,
+          });
+        }
+        console.log('Ukuran Data :', this.state.rumahSakitData.length);
+      }).catch(err => {
+          this.setState({
+            rumahSakitData: [],
+            isLoading: false,
+            moreLoading: false,
+          });
+          //  console.log(err)
+        });
+
+
     }
   }
 
